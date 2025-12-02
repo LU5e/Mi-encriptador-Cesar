@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url(imagenes/imagen-fondo.png);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  width: 90%;
+  max-width: 1100px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.459);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+}
+
+h1 {
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.sub {
+  opacity: .7;
+  margin-bottom: 40px;
+}
+
+.panel {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  flex: 1;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  padding: 15px;
+  border-radius: 10px;
+  background: #020617;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 2px solid #3b82f6;
+}
+
+input {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #020617;
+  color: white;
+  border: none;
+}
+
+.result-card {
+  justify-content: center;
+}
+
+#resultado {
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 150px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #0a1f3d, #001263);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Responsive*/
+/* Laptops */
+@media (max-width: 1024px) {
+  .glass {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .panel {
+    gap: 20px;
+  }
+
+  textarea,
+  input {
+    font-size: 15px;
+  }
+
+  button {
+    padding: 12px 30px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+  body {
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  .glass {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .panel {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .sub {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Pantallas medianas */
+@media (max-width: 480px) {
+  .glass {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  textarea,
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  #resultado {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .glass {
+    padding: 12px;
+  }
+
+  #resultado {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
